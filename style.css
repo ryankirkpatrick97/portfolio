@@ -1,9 +1,4 @@
 body{
-    background-color: red;
-}
-
-
-/* body{
     box-sizing: border-box  ;
     margin:auto;
     text-align: left;
@@ -19,33 +14,23 @@ header{
 }
 
 
-
 section{
     font-size: 16px;
+    padding-top:10px;
     padding-left: 10%;
     padding-right: 10%;
     max-width: 1280px; 
     margin:auto;
 }
 
-div.info{
-    padding-top: 10px;
-}
-
-div.demo_row{
+div.content{
     width:100%;
     text-align:justify;
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap:nowrap;
     justify-content: center;
 }
-div.demo{
+div.item{
+    padding:10px;
     margin:auto;
 }
-
-
-section h2{
-    color:#857251;
-    font-size: 24px;
-    display: block;
-} */
