@@ -1,11 +1,6 @@
 * {
     box-sizing: border-box;
 }
-
-section{
-    max-width:1600px;
-}
-
 .row {
   display: -ms-flexbox; /* IE 10 */
   display: flex;
