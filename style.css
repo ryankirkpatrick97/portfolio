@@ -69,12 +69,13 @@ div.content{
     width:100%;
     text-align:justify;
     display: flex;
-    flex-wrap:nowrap;
+    flex-wrap:wrap;
     justify-content: center;
 }
 div.item{
     padding:10px;
     margin:auto;
+    max-width:600px;
 }
 
 
