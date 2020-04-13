@@ -1,8 +1,10 @@
 body{
-    box-sizing: border-box  ;
+    /* box-sizing: border-box; */
     margin:auto;
     text-align: left;
     font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    position: relative;
 }
 
 header{
@@ -54,15 +56,13 @@ background-color: #008081;
 }
 
 
-
-
+/* Section */
 section{
     font-size: 16px;
     padding-top:10px;
-    padding-left: 10%;
-    padding-right: 10%;
     max-width: 1280px; 
     margin:auto;
+    padding-bottom:100px;
 }
 
 div.content{
@@ -75,4 +75,20 @@ div.content{
 div.item{
     padding:10px;
     margin:auto;
+}
+
+
+footer{
+    background-color: #111;
+    color:white;
+    padding:10px;
+    margin:auto;
+    text-align: center;
+    bottom:0;
+    position: absolute;
+    width:100%;
+}
+
+footer a{
+    color:white;
 }
