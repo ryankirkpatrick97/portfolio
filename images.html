@@ -33,21 +33,27 @@
 <h1>Cabo Trip Summer 2019</h1>
 <div class="row">
     <div class="column">
-        <img src="images/Cabo/IMG_0001.jpg" alt="Cabo Trip"/>
-        <img src="images/Cabo/IMG_0031.jpg" alt="Cabo Trip"/>
-        <img src="images/Cabo/IMG_0037.jpg" alt="Cabo Trip"/>
+        <img class="mainImgs" src="images/Cabo/IMG_0001.jpg" alt="Cabo Trip" onclick="showLightbox(this)"/>
+        <img class="mainImgs" src="images/Cabo/IMG_0031.jpg" alt="Cabo Trip" onclick="showLightbox(this)"/>
+        <img class="mainImgs" src="images/Cabo/IMG_0037.jpg" alt="Cabo Trip" onclick="showLightbox(this)"/>
     </div>
     <div class="column">
-        <img src="images/Cabo/IMG_0082.jpg" alt="Cabo Trip"/>
-        <img src="images/Cabo/IMG_0120.jpg" alt="Cabo Trip"/>
-        <img src="images/Cabo/IMG_8398.jpg" alt="Cabo Trip"/>
-        <img src="images/Cabo/IMG_9421.jpg" alt="Cabo Trip"/>
+        <img class="mainImgs" src="images/Cabo/IMG_0082.jpg" alt="Cabo Trip" onclick="showLightbox(this)"/>
+        <img class="mainImgs" src="images/Cabo/IMG_0120.jpg" alt="Cabo Trip" onclick="showLightbox(this)"/>
+        <img class="mainImgs" src="images/Cabo/IMG_8398.jpg" alt="Cabo Trip" onclick="showLightbox(this)"/>
+        <img class="mainImgs" src="images/Cabo/IMG_9421.jpg" alt="Cabo Trip" onclick="showLightbox(this)"/>
     </div>
     <div class="column">
-        <img src="images/Cabo/IMG_9158.jpg" alt="Cabo Trip"/>
-        <img src="images/Cabo/IMG_9409.jpg" alt="Cabo Trip"/>
-        <img src="images/Cabo/LRG_DSC01327.jpg" alt="Cabo Trip"/>
+        <img class="mainImgs" src="images/Cabo/IMG_9158.jpg" alt="Cabo Trip" onclick="showLightbox(this)"/>
+        <img class="mainImgs" src="images/Cabo/IMG_9409.jpg" alt="Cabo Trip" onclick="showLightbox(this)"/>
+        <img class="mainImgs" src="images/Cabo/LRG_DSC01327.jpg" alt="Cabo Trip" onclick="showLightbox(this)"/>
     </div>
+</div>
+
+
+<!-- Image Overlay -->
+<div class="lightbox" id="lightbox">
+    <img class="overlay" id="overlay_img"/>
 </div>
 </section>
 
@@ -59,4 +65,6 @@
 
 
 </body>
+
+<script type="text/javascript" src="scripts.js"></script>
 </html>
