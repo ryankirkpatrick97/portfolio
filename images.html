@@ -66,5 +66,12 @@
 
 </body>
 
-<script type="text/javascript" src="scripts.js"></script>
+<script type="text/javascript" src="scripts.js">
+</script>
+<script>
+
+var x = window.matchMedia("(max-width: 800px)")
+    resizeImagesPage(x) // Call listener function at run time
+    x.addListener(resizeImagesPage) // Attach listener function on state changes 
+</script>
 </html>
