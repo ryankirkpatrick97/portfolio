@@ -79,6 +79,12 @@ div.item{
     max-width:600px;
 }
 
+img.project_img{
+    max-width:600px;
+    margin:auto;
+    width:100%;
+}
+
 /* h1.item{
     position: relative;;
     vertical-align: middle;
@@ -119,11 +125,11 @@ iframe {
     cursor: pointer;
     padding: 15px;
     border-radius: 4px;
-  }
+}
   
-  #topButton:hover {
+#topButton:hover {
     background-color: #666;
-  }
+}
 
 footer{
     box-sizing:border-box;
