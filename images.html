@@ -50,12 +50,14 @@
     </div>
 </div>
 
-
 <!-- Image Overlay -->
 <div class="lightbox" id="lightbox">
     <img class="overlay" id="overlay_img"/>
 </div>
 </section>
+
+<!-- Button for going back to top-->
+<button onclick="gotoTopFunction()" id="topButton" title="Go to top">Top</button>
 
 <!-- Footer -->
 <footer>
@@ -63,15 +65,14 @@
     <a href="https://github.com/ryankirkpatrick97"><i class="fa fa-github"></i></a>
 </footer>
 
-
 </body>
 
-<script type="text/javascript" src="scripts.js">
-</script>
+<script type="text/javascript" src="scripts.js"></script>
 <script>
-
-var x = window.matchMedia("(max-width: 800px)")
+    var x = window.matchMedia("(max-width: 800px)")
     resizeImagesPage(x) // Call listener function at run time
-    x.addListener(resizeImagesPage) // Attach listener function on state changes 
+    x.addListener(resizeImagesPage) // Attach listener function on state changes
+
+    window.onscroll = function() {scrollCheck()};
 </script>
 </html>
