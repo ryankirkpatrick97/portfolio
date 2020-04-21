@@ -85,32 +85,29 @@ img.project_img{
     width:100%;
 }
 
-/* h1.item{
-    position: relative;;
-    vertical-align: middle;
-    margin:auto;
+/* For Videos Page */
+h1{
+    text-align: center;
 }
 
-div.video{
-    width:100%;
+.container {
     position: relative;
-	padding-bottom: 56.25%;
-	padding-top: 25px;
+    width: 100%;
     height: 0;
+    padding-bottom: 56.25%;
+    display:block;
+    margin-top:30px;
+    margin-bottom:30px;
 }
-
-iframe {
-    padding: 10px;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-    display: block;
 }
-*/
 
-
+/* For Goto Top Button */
 #topButton {
     display: none;
     position: fixed;
@@ -131,6 +128,8 @@ iframe {
     background-color: #666;
 }
 
+
+/* Footer */
 footer{
     box-sizing:border-box;
     background-color: #111;
