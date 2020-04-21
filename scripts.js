@@ -40,7 +40,18 @@ function resizeImagesPage(x) {
 // When the user scrolls down 20px from the top of the document, show the button
 function scrollCheck() {
     var topButton = document.getElementById("topButton")
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    
+    //  Find a quarter of the height of the page
+    var body = document.body,
+    html = document.documentElement;
+
+    var height = Math.max( body.scrollHeight, body.offsetHeight, 
+                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+    var quarterHeight = height * 0.25;
+
+
+
+    if (document.body.scrollTop > quarterHeight || document.documentElement.scrollTop > quarterHeight) {
         topButton.style.display = "block";
     } else {
         topButton.style.display = "none";
