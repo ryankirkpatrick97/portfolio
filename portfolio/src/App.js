@@ -41,6 +41,7 @@ export class App extends Component {
     ];
 
     return (
+      <body>
       <div className="page">
         <div className="header">
           <Header/>
@@ -52,15 +53,18 @@ export class App extends Component {
             changeTab={this.changeTab}
           />
         </div>
+        <section>
         <div className="body">
           <Body
             activeTab={this.state.activeTab}
           />
         </div>
+        </section>
         <div className="footer">
           <Footer/>
         </div>
       </div>
+      </body>
     );
   }
 };
