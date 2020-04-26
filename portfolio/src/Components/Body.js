@@ -20,16 +20,9 @@ export class Body extends Component {
         }  
     }
 
-
     render() {
-        let style = {
-            position:'relative',
-            overflow: 'auto',
-        }
         return (
-            <div style={style}>
-                {this.displayContent(this.props.activeTab)}
-            </div>
+            this.displayContent(this.props.activeTab)
         )
     }
 }
