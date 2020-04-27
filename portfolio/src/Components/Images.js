@@ -14,25 +14,25 @@ import { SRLWrapper } from 'simple-react-lightbox'
 export class Images extends Component{
     render(){
         return (
-        <SRLWrapper style={{z_index: '9999'}}>
+        <SRLWrapper>
         <div>
             <h1>Cabo Trip Summer 2019</h1>
             <div class="row">
                 <div class="column">
-                    <img class="mainImgs" src={IMG_0001} alt="Cabo Trip" onclick="showLightbox(this)"/>
-                    <img class="mainImgs" src={IMG_0031} alt="Cabo Trip" onclick="showLightbox(this)"/>
-                    <img class="mainImgs" src={IMG_0037} alt="Cabo Trip" onclick="showLightbox(this)"/>
+                    <img class="mainImgs" src={IMG_0001} alt="Cabo Trip"/>
+                    <img class="mainImgs" src={IMG_0031} alt="Cabo Trip"/>
+                    <img class="mainImgs" src={IMG_0037} alt="Cabo Trip"/>
                 </div>
                 <div class="column">
-                    <img class="mainImgs" src={IMG_0082} alt="Cabo Trip" onclick="showLightbox(this)"/>
-                    <img class="mainImgs" src={IMG_0120} alt="Cabo Trip" onclick="showLightbox(this)"/>
-                    <img class="mainImgs" src={IMG_8398} alt="Cabo Trip" onclick="showLightbox(this)"/>
-                    <img class="mainImgs" src={IMG_9421} alt="Cabo Trip" onclick="showLightbox(this)"/>
+                    <img class="mainImgs" src={IMG_0082} alt="Cabo Trip"/>
+                    <img class="mainImgs" src={IMG_0120} alt="Cabo Trip"/>
+                    <img class="mainImgs" src={IMG_8398} alt="Cabo Trip"/>
+                    <img class="mainImgs" src={IMG_9421} alt="Cabo Trip"/>
                 </div>
                 <div class="column">
-                    <img class="mainImgs" src={IMG_9158} alt="Cabo Trip" onclick="showLightbox(this)"/>
-                    <img class="mainImgs" src={IMG_9409} alt="Cabo Trip" onclick="showLightbox(this)"/>
-                    <img class="mainImgs" src={LRG_DSC01327} alt="Cabo Trip" onclick="showLightbox(this)"/>
+                    <img class="mainImgs" src={IMG_9158} alt="Cabo Trip"/>
+                    <img class="mainImgs" src={IMG_9409} alt="Cabo Trip"/>
+                    <img class="mainImgs" src={LRG_DSC01327} alt="Cabo Trip"/>
                 </div>
             </div>
         </div>

@@ -9,6 +9,7 @@ export class Home extends Component{
             width: '100%',
             max_width: '300px'
         }
+        
         return (
         <SRLWrapper>
         <div className="content">
