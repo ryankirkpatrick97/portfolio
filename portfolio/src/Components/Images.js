@@ -12,7 +12,32 @@ import LRG_DSC01327 from "../images/Cabo/LRG_DSC01327.jpg"
 import { SRLWrapper } from 'simple-react-lightbox'
 
 export class Images extends Component{
+    resizeImagesPage(x){
+        // Get the elements with class="column"
+        var elements = document.getElementsByClassName("column");
+    
+        // Declare a loop variable
+        var i;
+        if (x.matches){
+            for (i = 0; i < elements.length; i++) {
+                elements[i].style.msFlex = "100%";  // IE10
+                elements[i].style.flex = "100%";
+            }    
+        }
+        else{
+            for (i = 0; i < elements.length; i++) {
+                elements[i].style.msFlex = "33%";  // IE10
+                elements[i].style.flex = "33%";
+            }
+        }
+    }
+
+
     render(){
+        var x = window.matchMedia("(max-width: 800px)")
+        this.resizeImagesPage(x) // Call listener function at run time
+        x.addListener(this.resizeImagesPage) // Attach listener function on state changes    
+
         return (
         <SRLWrapper>
         <div>
