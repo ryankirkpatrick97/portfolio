@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import './images.css'
 import me from '../images/me.jpg'
+import { SRLWrapper } from 'simple-react-lightbox'
 
 export class Home extends Component{
     render(){
@@ -9,6 +10,7 @@ export class Home extends Component{
             max_width: '300px'
         }
         return (
+        <SRLWrapper>
         <div className="content">
             <div className="item">
                 <img className="mainImgs" src={me} alt="Me" style={imgStyle}/>
@@ -22,6 +24,7 @@ export class Home extends Component{
                 </p>
             </div>
         </div>
+        </SRLWrapper>
         )
     };
 }

@@ -9,10 +9,12 @@ import IMG_9421 from "../images/Cabo/IMG_9421.jpg"
 import IMG_9158 from "../images/Cabo/IMG_9158.jpg"
 import IMG_9409 from "../images/Cabo/IMG_9409.jpg"
 import LRG_DSC01327 from "../images/Cabo/LRG_DSC01327.jpg"
+import { SRLWrapper } from 'simple-react-lightbox'
 
 export class Images extends Component{
     render(){
         return (
+        <SRLWrapper style={{z_index: '9999'}}>
         <div>
             <h1>Cabo Trip Summer 2019</h1>
             <div class="row">
@@ -34,6 +36,7 @@ export class Images extends Component{
                 </div>
             </div>
         </div>
+        </SRLWrapper>
         )
     };
 }

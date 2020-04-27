@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import SimpleReactLightbox from "simple-react-lightbox"
+
 import './App.css'
 import './Components/style.css'
 import Body from './Components/Body'
@@ -41,6 +43,7 @@ export class App extends Component {
     ];
 
     return (
+      <SimpleReactLightbox>
       <body>
       <div className="page">
         <div className="header">
@@ -65,6 +68,7 @@ export class App extends Component {
         </div>
       </div>
       </body>
+      </SimpleReactLightbox>
     );
   }
 };
