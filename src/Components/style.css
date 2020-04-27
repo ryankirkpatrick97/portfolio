@@ -116,6 +116,7 @@ h1{
     display:block;
     margin-top:30px;
     margin-bottom:30px;
+    z-index: -1;
 }
 .video {
     position: absolute;
