@@ -1,15 +1,97 @@
 import React, {Component} from 'react'
-import { SRLWrapper } from 'simple-react-lightbox'
+import config from '../config.js'
+import moment from 'moment';
+
+const firebase = require('firebase')
 
 export class FeedbackInput extends Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: '',
+            description: '',
+            message: '',
+            display: 'Yes',
+            email: '',
+            time: '',
+        };
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    } 
+    handleChange = (event) => {
+        let nam = event.target.name;
+        let val = event.target.value;
+        this.setState({[nam]: val});
+      }
+    
+    handleSubmit(event) {
+        if(this.state.name.length < 6  || this.state.name.length > 19){
+            alert('Please insert a name that is more than 5 characters and less than 20')
+        }
+        else if(this.state.description.length > 99){
+            alert('Please insert a description shorter than 100 characters')
+        }
+        else if(this.state.message.length < 16 || this.state.message.length > 499){
+            alert('Please insert a message that is longer than 15 characters but shorter than 500')
+        }
+        else{
+            this.updateFirebase();
+            // this.clearFields();
+        }
+        event.preventDefault();
+    }
+
+
+    updateFirebase(){
+        if (!firebase.apps.length) {
+            firebase.initializeApp(config)
+        }
+        this.state.time = moment()
+            .utcOffset('-07:00')
+            .format('YYYY-MM-DD hh:mm:ss a');
+        firebase.database().ref('response').push().set(this.state)
+    }
+
+
     render(){        
         return (
-            <form>
+            <form onSubmit={this.handleSubmit}>
                 <label>
-                    Name:
-                    <input type="text" name="name" />
+                Name:
+                <input type="text" name="name" onChange={this.handleChange} />
                 </label>
+                <br/>
+
+                <label>
+                Description:
+                <input type="text" name="description" onChange={this.handleChange} />
+                </label>
+                <br/>
+
+                <label>
+                Message:
+                <input type="text" name="message" onChange={this.handleChange} />
+                </label>
+                <br/>
+
+                <label>
+                Would you like to display your message to everyone?
+                <select value={this.state.display} name="display" onChange={this.handleChange}>
+                    <option name="display" value="Yes" onChange={this.handleChange}>Yes</option>
+                    <option name="display" value="No" onChange={this.handleChange}>No</option>
+                </select>
+                </label>
+                <br/>
+
+
+                <label>
+                Email:
+                <input type="text" name="email" onChange={this.handleChange} />
+                </label>
+                <br/>
+                
                 <input type="submit" value="Submit" />
+                <br/>
             </form>
         )
     };

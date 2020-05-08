@@ -1,4 +1,4 @@
-import React, {useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import config from '../config.js'
 const firebase = require('firebase')
 
@@ -6,7 +6,6 @@ const firebase = require('firebase')
 export const FirebaseAccess = () => {
     const [data, setData] = useState([])
     const [shouldRender, setShouldRender] = useState(true)
-    const sample = ["hi", "hello", "how are you"]
   
     useEffect( () => {
       if (!firebase.apps.length) {
@@ -14,7 +13,7 @@ export const FirebaseAccess = () => {
       }
       
       //get a reference to the database
-      let ref = firebase.database().ref('data')
+      let ref = firebase.database().ref('response')
   
       //retrieve its data
       ref.on('value', snapshot => {
@@ -27,19 +26,25 @@ export const FirebaseAccess = () => {
           setShouldRender(!shouldRender)
           setData(state)
       })
-    }, [shouldRender])
-  
-  
-    return(
-      <div>
-          <p>{data}</p> 
-          {sample.map((s, index) => (
-            <p>
-              {s}
-            </p>
-          ))}
-      </div>
-    )
+    }, [shouldRender]);
+    
+    return (
+        <div className="FirebaseScroll">
+        <ul>
+            {data.map(item => (
+            <li
+                style={{ height: '250px', border: '1px solid black' }}
+            >
+                {/* <div>{item.id}</div> */}
+                <div>{item.name}</div>
+                <div>{item.message}</div>
+                <div>{item.email}</div>
+                {/* <div>{shouldRender}</div>  */}
+            </li>
+            ))}
+        </ul>
+        </div>
+    );
   }
   
 
