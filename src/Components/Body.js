@@ -3,6 +3,7 @@ import Home from './Home.js'
 import Images from './Images.js'
 import Videos from './Videos.js'
 import Projects from './Projects.js'
+import Feedback from './Feedback.js'
 
 export class Body extends Component {
     displayContent = () => {
@@ -17,6 +18,9 @@ export class Body extends Component {
         }
         else if(activeTab === 4){
             return <Projects/>
+        }
+        else if(activeTab === 5){
+            return <Feedback/>
         }  
     }
 

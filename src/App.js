@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import SimpleReactLightbox from "simple-react-lightbox"
 import ScrollUpButton from "react-scroll-up-button"
 
@@ -40,6 +40,10 @@ export class App extends Component {
       {
         id: 4,
         title: 'Projects'
+      },
+      {
+        id: 5,
+        title: 'Feedback'
       }
     ];
 
