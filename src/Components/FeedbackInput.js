@@ -83,7 +83,9 @@ export class FeedbackInput extends Component{
                 </select>
                 </label>
                 
+                <div className="submitButton">
                 <input type="submit" value="Submit" />
+                </div>
                 
             </form>
         )
