@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import FirebaseAccess from './FirebaseAccess'
 import config from '../config.js'
 const firebase = require('firebase')
 
@@ -40,7 +39,7 @@ export class FeedbackResponse extends Component{
     componentDidUpdate(prevProps, prevState, snapshot){
         //only call set state here if it is wrapped in a condition
         //if you initialize this.state.shouldUpdate and have not changed it yet then this will not run
-        if(this.state.shouldUpdate != prevState.shouldUpdate){
+        if(this.state.shouldUpdate !== prevState.shouldUpdate){
             //same code as above to retrieve the data 
         }
     }
@@ -49,7 +48,7 @@ export class FeedbackResponse extends Component{
         return (
             <div className="FirebaseScroll">
             <ul>
-                {this.state.response.map(item => (
+                {this.state.response.slice(0).reverse().map(item => (
                     <li className="FeedbackItem">
                         <div>{item.name}</div>
                         <div>{item.description}</div>

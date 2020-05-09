@@ -46,9 +46,9 @@ export class FeedbackInput extends Component{
         if (!firebase.apps.length) {
             firebase.initializeApp(config)
         }
-        this.state.time = moment()
-            .utcOffset('-07:00')
-            .format('YYYY-MM-DD hh:mm:ss a');
+        this.setState({time:
+            moment().utcOffset('-07:00').format('YYYY-MM-DD hh:mm:ss a')
+        });
         firebase.database().ref('response').push().set(this.state)
     }
 
@@ -57,41 +57,35 @@ export class FeedbackInput extends Component{
         return (
             <form onSubmit={this.handleSubmit}>
                 <label>
-                Name:
+                <div className="FeedbackLabel">Name:</div>
                 <input type="text" name="name" onChange={this.handleChange} />
-                </label>
-                <br/>
+                </label>                
 
                 <label>
-                Description:
+                <div className="FeedbackLabel">Personal Description:</div>
                 <input type="text" name="description" onChange={this.handleChange} />
-                </label>
-                <br/>
+                </label>                
 
                 <label>
-                Message:
+                <div className="FeedbackLabel">Email:</div>
+                <input type="text" name="email" onChange={this.handleChange} />
+                </label>
+
+                <label>
+                <div className="FeedbackLabel">Message:</div>
                 <input type="text" name="message" onChange={this.handleChange} />
                 </label>
-                <br/>
 
                 <label>
-                Would you like to display your message to everyone?
+                <div className="FeedbackLabel">Would you like to display your message to everyone?</div>
                 <select value={this.state.display} name="display" onChange={this.handleChange}>
                     <option name="display" value="Yes" onChange={this.handleChange}>Yes</option>
                     <option name="display" value="No" onChange={this.handleChange}>No</option>
                 </select>
                 </label>
-                <br/>
-
-
-                <label>
-                Email:
-                <input type="text" name="email" onChange={this.handleChange} />
-                </label>
-                <br/>
                 
                 <input type="submit" value="Submit" />
-                <br/>
+                
             </form>
         )
     };
