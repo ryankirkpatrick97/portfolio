@@ -36,11 +36,11 @@ export class FeedbackInput extends Component{
         }
         else{
             this.updateFirebase();
-            // this.clearFields();
+            document.getElementById("userInput").reset();
+            alert('Database has been updated successfully.')
         }
         event.preventDefault();
     }
-
 
     updateFirebase(){
         if (!firebase.apps.length) {
@@ -55,7 +55,7 @@ export class FeedbackInput extends Component{
 
     render(){        
         return (
-            <form onSubmit={this.handleSubmit}>
+            <form id="userInput" onSubmit={this.handleSubmit}>
                 <label>
                 <div className="FeedbackLabel">Name:</div>
                 <input type="text" name="name" onChange={this.handleChange} />
