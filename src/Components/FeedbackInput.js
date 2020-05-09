@@ -57,22 +57,22 @@ export class FeedbackInput extends Component{
             <form id="userInput" onSubmit={this.handleSubmit}>
                 <label>
                 <div className="FeedbackLabel">Name:</div>
-                <input type="text" name="name" onChange={this.handleChange} />
+                <textarea type="text" name="name" onChange={this.handleChange} />
                 </label>                
 
                 <label>
                 <div className="FeedbackLabel">Personal Description:</div>
-                <input type="text" name="description" onChange={this.handleChange} />
+                <textarea type="text" name="description" onChange={this.handleChange} />
                 </label>                
 
                 <label>
                 <div className="FeedbackLabel">Email:</div>
-                <input type="text" name="email" onChange={this.handleChange} />
+                <textarea type="text" name="email" onChange={this.handleChange} />
                 </label>
 
                 <label>
                 <div className="FeedbackLabel">Message:</div>
-                <input type="text" name="message" onChange={this.handleChange} />
+                <textarea type="text" name="message" onChange={this.handleChange} />
                 </label>
 
                 <label>

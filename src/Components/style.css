@@ -143,13 +143,13 @@ div.FeedbackLabel{
     padding:10px;
     text-align:left;
 }
-input[type=text]{
+textarea{
     -moz-box-shadow: inset -3px -3px 10px #eee;
     -webkit-box-shadow: inset -3px -3px 10px #eee;
     box-shadow: inset -3px -3px 10px #eee;
     border-radius: 15px;
     width: 100%;
-    padding: 10px;
+    padding: 5px;
  }
 
 /* Select */
