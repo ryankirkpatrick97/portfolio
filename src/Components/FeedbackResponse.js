@@ -23,9 +23,10 @@ export class FeedbackResponse extends Component{
                 name: items[item].name,
                 description: items[item].description,
                 message: items[item].message,
-                display: items[item].display,
+                display: (items[item].display == "Yes") ? true : false,
                 email: items[item].email,
                 time: items[item].time,
+
               });
             }
 
@@ -44,17 +45,27 @@ export class FeedbackResponse extends Component{
         }
     }
 
+
+    displayMessage(item){
+        if(item.display){
+            return (
+                <div>{item.message}</div>
+            )
+        }
+    }
+
+
     render(){        
         return (
             <div className="FirebaseScroll">
             <ul>
                 {this.state.response.slice(0).reverse().map(item => (
                     <li className="FeedbackItem">
-                        <div>{item.name}</div>
-                        <div>{item.description}</div>
-                        <div>{item.message}</div>
-                        <div>{item.email}</div>
                         <div>{item.time}</div>
+                        <div>{item.name}</div>
+                        <div>{item.email}</div>
+                        <div>{item.description}</div>
+                        {this.displayMessage(item)}
                     </li>
                 ))}
             </ul>
