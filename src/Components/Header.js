@@ -5,7 +5,7 @@ export class Header extends Component{
         return (
             <header>
                 <h2>CS 185 - Human-Computer Interface</h2>
-                <h2>Homework 4</h2>
+                <h2>Homework 5</h2>
                 <h2><i>Ryan Kirkpatrick</i></h2>
             </header>
         )
