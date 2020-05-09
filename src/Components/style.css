@@ -25,6 +25,9 @@ header{
     top: 0;
     /* z-index: 1; */
     background-color: #333;
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
 }
 
 .nav-item{
@@ -129,16 +132,6 @@ h1{
 
 /* Feedback */
 
-div.FirebaseScroll{
-    overflow-y:scroll;
-    overflow-wrap: break-word;
-    width:100%;
-    background-color:#666;
-    max-height: 80vh;
-    border-radius:25px;
-}
-
-
 /* Fields */
 div.FeedbackLabel{
     padding:10px;
@@ -215,6 +208,15 @@ select{
      padding-top:10px; 
      text-align:center;
  }
+
+ div.FirebaseScroll{
+    overflow-y:scroll;
+    overflow-wrap: break-word;
+    width:100%;
+    background-color:#666;
+    max-height: 80vh;
+    border-radius:25px;
+}
 
 
 div.FeedbackItemContainer{
