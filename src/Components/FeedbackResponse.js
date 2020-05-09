@@ -49,7 +49,23 @@ export class FeedbackResponse extends Component{
     displayMessage(item){
         if(item.display){
             return (
-                <div>{item.message}</div>
+                <div id="itemMessage">Feedback: {item.message}</div>
+            )
+        }
+    }
+
+    displayEmail(item){
+        if(item.email.length > 0){
+            return(
+                <div id="itemEmail">Email: {item.email} </div>
+            )
+        }
+    }
+
+    displayDescription(item){
+        if(item.description.length > 0){
+            return(
+                <div id="itemDescription">Description: {item.description} </div>
             )
         }
     }
@@ -58,15 +74,17 @@ export class FeedbackResponse extends Component{
     render(){        
         return (
             <div className="FirebaseScroll">
-            <ul>
+            <ul className="FeedbackList">
                 {this.state.response.slice(0).reverse().map(item => (
+                    <div className="FeedbackItemContainer">
                     <li className="FeedbackItem">
-                        <div>{item.time}</div>
-                        <div>{item.name}</div>
-                        <div>{item.email}</div>
-                        <div>{item.description}</div>
+                        <div id="itemTime">{item.time}</div>
+                        <div id="itemName">Name: {item.name}</div>
+                        {this.displayEmail(item)}
+                        {this.displayDescription(item)}
                         {this.displayMessage(item)}
                     </li>
+                    </div>
                 ))}
             </ul>
             </div>

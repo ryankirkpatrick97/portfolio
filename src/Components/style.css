@@ -135,6 +135,7 @@ div.FirebaseScroll{
     width:100%;
     background-color:#666;
     max-height: 80vh;
+    border-radius:25px;
 }
 
 
@@ -215,6 +216,16 @@ select{
      text-align:center;
  }
 
+
+div.FeedbackItemContainer{
+    padding:10px;
+    padding-right:50px;
+}
+
+ul.FeedbackList{
+    list-style-type: none;
+}
+
 li.FeedbackItem{
     background-color: white;
     width:100%;
@@ -222,7 +233,28 @@ li.FeedbackItem{
     max-width: 300px;
     border:10px;
     border-color: #666;
+    border-radius:25px;
+    padding:10px;
 }
+
+div#itemTime{
+    color:red;
+    font-size: x-small;
+    padding-left:5px;
+}
+
+div#itemName, div#itemMessage{
+    padding-top:5px;
+    padding-left:5px;
+}
+
+div#itemEmail, div#itemDescription{
+    color:#444;
+    font-size: small;
+    /* padding:5px; */
+    padding-left: 15px;
+}
+
 
 /* Footer */
 footer{
