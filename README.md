@@ -1,4 +1,4 @@
-# CS185 - Homework 4
+# CS185 - Homework 6
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
