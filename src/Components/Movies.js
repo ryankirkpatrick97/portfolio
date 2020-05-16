@@ -69,6 +69,13 @@ export class Movies extends Component{
         divDirector.textContent = "Directed by " + movieInfo.Director;
         divRating.textContent = "IMDB Rating: " + movieInfo.Rating + "/10";
         divPlot.textContent = movieInfo.Plot;
+
+        // Set rating's color based on rating
+        if (parseFloat(movieInfo.Rating) >= 7.0)
+            divRating.style.color = "green";
+        else
+            divRating.style.color = "red";
+
     }
 
     render(){        
