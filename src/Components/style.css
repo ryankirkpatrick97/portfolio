@@ -105,6 +105,20 @@ img.project_img{
     margin:auto;
     width:100%;
 }
+/* Movie Posters Page */
+div.posterGrid{
+    display:flex;
+    flex-wrap:wrap;
+    text-align: center;
+    justify-content: center;
+}
+
+div.poster{
+    display:block;
+    max-width:200px;
+    width:100%;
+}
+
 
 /* For Videos Page */
 h1{

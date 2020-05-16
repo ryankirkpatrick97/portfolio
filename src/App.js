@@ -35,14 +35,18 @@ export class App extends Component {
       },
       {
         id: 3,
-        title: 'Videos'
+        title: 'Movies'
       },
       {
         id: 4,
-        title: 'Projects'
+        title: 'Videos'
       },
       {
         id: 5,
+        title: 'Projects'
+      },
+      {
+        id: 6,
         title: 'Feedback'
       }
     ];
