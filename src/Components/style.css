@@ -125,6 +125,11 @@ img.posterImg{
     border:1px solid black;
 }
 
+img.posterImg:hover{
+    background-color:black;
+    opacity: 0.5;
+}
+
 /* The Modal (background) */
 div.lightbox {
     display: none;/* Hidden by default */
