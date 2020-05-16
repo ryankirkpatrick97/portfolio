@@ -131,23 +131,30 @@ div.lightbox {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-  }
+}
   
-  
-  /* Modal Content (Image) */
-  .LBImage {
+div.LBInfo{
     margin: auto;
     display: block;
-    width: 80%;
-    height:auto;
-    max-width: 700px;
-    padding:10px;
+    max-width: 600px;
+    width:100%;
     position: absolute;
     top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-  }
+    background-color: white;
+}
+  
+/* Modal Content (Image) */
+.LBImage {
+    margin: left;
+    display: block;
+    width: 80%;
+    height:auto;
+    max-width: 300px;
+    padding:10px;
+}
   
   
   /* 100% Image Width on Smaller Screens */

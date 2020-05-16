@@ -41,7 +41,8 @@ export class Movies extends Component{
         var lBox = document.getElementById("lightbox");
         if(event.target.id !== "lightbox")
             return;
-        // Remove modal
+        // Reenable scroll and remove lightbox
+        document.body.style.overflowY = "scroll"
         lBox.style.display = "none";
     }
 
@@ -53,6 +54,8 @@ export class Movies extends Component{
          
         lBox.style.display = "inline-block";
         overlayImg.src = movieInfo.Poster;
+        // Disable Scrolling
+        document.body.style.overflow = "hidden"
     }
 
     render(){        
