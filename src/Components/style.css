@@ -111,12 +111,18 @@ div.posterGrid{
     flex-wrap:wrap;
     text-align: center;
     justify-content: center;
+    align-items: center;
 }
 
 div.poster{
     display:block;
     max-width:200px;
     width:100%;
+    padding:2px;
+}
+
+img.posterImg{
+    border:1px solid black;
 }
 
 /* The Modal (background) */
@@ -133,7 +139,7 @@ div.lightbox {
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
   
-div.LBInfo{
+div.LBDisplay{
     margin: auto;
     display: block;
     max-width: 600px;
@@ -144,26 +150,42 @@ div.LBInfo{
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     background-color: white;
+    display:flex;
 }
   
 /* Modal Content (Image) */
 .LBImage {
     margin: left;
     display: block;
-    width: 80%;
+    width: 100%;
     height:auto;
     max-width: 300px;
     padding:10px;
 }
   
-  
-  /* 100% Image Width on Smaller Screens */
-  @media only screen and (max-width: 700px){
-    .LBImage {
-      width: 100%;
-    }
-  } 
+.LBInfo{
+    margin:left;
+    display:block;
+    padding:10px;
+}
 
+#LBPosterTitle{
+    font-size: xx-large;
+    font-weight: bold;
+    padding:1px;
+}
+#LBPosterDirector{
+    font-size:larger;
+    color:gray;
+    padding: 1px;
+}
+#LBPosterRating{
+    padding:1px;
+    color:green;
+}
+#LBPosterPlot{
+    padding:1px;
+}
 
 /* For Videos Page */
 h1{

@@ -1,6 +1,4 @@
 import React, {Component} from 'react'
-import me from '../images/me.jpg'
-import { SRLWrapper } from 'simple-react-lightbox'
 const axios = require('axios')
 
 export class Movies extends Component{
@@ -8,8 +6,9 @@ export class Movies extends Component{
         super(props);
         
         this.state = {
-            ids: ["tt0061418", "tt0033467", "tt0353496", "tt0137523", "tt0114814", "tt0169547", "tt0144084", "tt0206634", "tt1130884", "tt0092005", "tt0338013",
-                "tt0264464", "tt0075314", "tt0066921", "tt1531905", "tt0034583", "tt0099348", "tt0095016"],
+            ids: ["tt0061418", "tt0033467", "tt0353496", "tt0137523",],
+            //  "tt0114814", "tt0169547", "tt0144084", "tt0206634", "tt1130884", "tt0092005", "tt0338013",
+            //     "tt0264464", "tt0075314", "tt0066921", "tt1531905", "tt0034583", "tt0099348", "tt0095016"],
             response: [],
         }
 
@@ -28,6 +27,7 @@ export class Movies extends Component{
                     Title: data.Title,
                     Director: data.Director,
                     Rating:data.imdbRating,
+                    Plot: data.Plot,
                 })
                 this.setState({
                     response: newState,
@@ -48,14 +48,27 @@ export class Movies extends Component{
 
     displayLightBox(movieInfo){
         var lBox = document.getElementById("lightbox");
-        var lBoxInfo = document.getElementById("LBInfo")
+        var divTitle = document.getElementById("LBPosterTitle");
+        var divDirector = document.getElementById("LBPosterDirector");
+        var divRating = document.getElementById("LBPosterRating");
+        var divPlot = document.getElementById("LBPosterPlot");
         var overlayImg = document.getElementById("overlay_img");
 
-         
-        lBox.style.display = "inline-block";
-        overlayImg.src = movieInfo.Poster;
         // Disable Scrolling
         document.body.style.overflow = "hidden"
+        
+        // Display lightbox
+        lBox.style.display = "inline-block";
+        
+        // Change Image
+        overlayImg.src = movieInfo.Poster;
+        overlayImg.alt = movieInfo.Title;
+        
+        // Fill out movies info
+        divTitle.textContent = movieInfo.Title;
+        divDirector.textContent = "Directed by " + movieInfo.Director;
+        divRating.textContent = "IMDB Rating: " + movieInfo.Rating + "/10";
+        divPlot.textContent = movieInfo.Plot;
     }
 
     render(){        
@@ -63,12 +76,18 @@ export class Movies extends Component{
         <div>
             <div className="posterGrid">
                 {this.state.response.map(x => (
-                    <div className="poster"><img src={x.Poster} alt={x.Title} onClick={() => this.displayLightBox(x)}/></div>
+                    <div className="poster"><img className="posterImg" src={x.Poster} alt={x.Title} onClick={() => this.displayLightBox(x)}/></div>
                 ))}
             </div>
             <div className="lightbox" id="lightbox" style={{display: this.state.lbDisplay}} onClick={this.hideLightbox}>
-                <div className="LBInfo" id="LBInfo">
-                    <img class="LBImage" id="overlay_img"/>
+                <div className="LBDisplay" id="LBDisplay">
+                    <img className="LBImage" id="overlay_img" alt="overlay"/>
+                    <div className="LBInfo" id="LBInfo">
+                        <div id="LBPosterTitle"/>
+                        <div id="LBPosterDirector"/>
+                        <div id="LBPosterRating"/>
+                        <div id="LBPosterPlot"/>
+                    </div>
                 </div>
             </div>
         </div>
