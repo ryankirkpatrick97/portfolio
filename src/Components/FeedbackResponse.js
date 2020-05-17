@@ -23,7 +23,7 @@ export class FeedbackResponse extends Component{
                 name: items[item].name,
                 description: items[item].description,
                 message: items[item].message,
-                display: (items[item].display == "Yes") ? true : false,
+                display: (items[item].display === "Yes") ? true : false,
                 email: items[item].email,
                 time: items[item].time,
 

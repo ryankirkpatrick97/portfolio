@@ -46,7 +46,9 @@ export class FeedbackInput extends Component{
         if (!firebase.apps.length) {
             firebase.initializeApp(config)
         }
-        this.state.time = moment().utcOffset('-07:00').format('YYYY-MM-DD hh:mm:ss a')
+        this.setState({
+            time: moment().utcOffset('-07:00').format('YYYY-MM-DD hh:mm:ss a')
+        });
 
         firebase.database().ref('response').push().set(this.state)
     }
