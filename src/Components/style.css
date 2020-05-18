@@ -135,7 +135,7 @@ img.posterImg:hover{
 div.lightbox {
     display: none;/* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 2; /* Sit on top */
+    z-index: 1001; /* Sit on top */ /* Set to 1001 to be above ScrollUpButton */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -143,29 +143,33 @@ div.lightbox {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    justify-content: center;
 }
   
 div.LBDisplay{
     margin: auto;
     display: block;
-    max-width: 600px;
-    width:100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
     background-color: white;
     display:flex;
+    height:auto;
+    overflow:hidden;
+    max-width: 70vw;
+    position: relative;
 }
   
+
+@media screen and (max-width:576px){
+    div.LBDisplay{
+        flex-direction: column;
+    }
+}
+
 /* Modal Content (Image) */
 .LBImage {
     margin: left;
     display: block;
-    width: 100%;
+    width: 300px;
     height:auto;
-    max-width: 300px;
     padding:10px;
 }
   

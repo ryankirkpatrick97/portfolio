@@ -18,24 +18,27 @@ export class Movies extends Component{
 
     componentDidMount() {
 
-        this.state.ids.map(id => (
-        axios.get('https://www.omdbapi.com/?apikey=d0b4efe6&i=' + id)
-            .then(({data}) => {
+        var promises = this.state.ids.map(id => {
+            return axios.get('https://www.omdbapi.com/?apikey=d0b4efe6&i=' + id)
+        })
+
+        // Purposely wait for all the info from all the movies to display in same order each time
+        Promise.all(promises).then((values) => {
+            values.forEach((value) => {
                 let newState = this.state.response;
                 newState.push({
-                    Poster: data.Poster,
-                    Title: data.Title,
-                    Director: data.Director,
-                    Rating:data.imdbRating,
-                    Plot: data.Plot,
+                    Poster: value.data.Poster,
+                    Title: value.data.Title,
+                    Director: value.data.Director,
+                    Rating: value.data.imdbRating,
+                    Plot: value.data.Plot,
                 })
                 this.setState({
                     response: newState,
                 })
             })
-        ))
-      }
-
+        })
+    }
 
     hideLightbox(event){
         var lBox = document.getElementById("lightbox");
@@ -58,7 +61,7 @@ export class Movies extends Component{
         document.body.style.overflow = "hidden"
         
         // Display lightbox
-        lBox.style.display = "inline-block";
+        lBox.style.display = "flex";
         
         // Change Image
         overlayImg.src = movieInfo.Poster;
