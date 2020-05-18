@@ -19,7 +19,7 @@ export class Movies extends Component{
     componentDidMount() {
 
         this.state.ids.map(id => (
-        axios.get('http://www.omdbapi.com/?apikey=d0b4efe6&i=' + id)
+        axios.get('https://www.omdbapi.com/?apikey=d0b4efe6&i=' + id)
             .then(({data}) => {
                 let newState = this.state.response;
                 newState.push({
