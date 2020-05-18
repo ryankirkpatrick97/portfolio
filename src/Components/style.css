@@ -135,7 +135,7 @@ img.posterImg:hover{
 div.lightbox {
     display: none;/* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 9999; /* Sit on top */ /* Set high to be above ScrollUpButton */
+    z-index: 1001; /* Sit on top */ /* Set high to be above ScrollUpButton */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
