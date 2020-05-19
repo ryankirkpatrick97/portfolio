@@ -22,7 +22,6 @@ export class Home extends Component{
 
     getLightbox(){
         if(this.state.showLB){
-            alert(this.state.image.alt)
             return(<LightBox image={this.state.image} changeShowLB={this.changeShowLB}/>)
         } else {
             return null;
