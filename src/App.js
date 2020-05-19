@@ -31,22 +31,14 @@ export class App extends Component {
       },
       {
         id: 2,
-        title: 'Images'
-      },
-      {
-        id: 3,
-        title: 'Movies'
-      },
-      {
-        id: 4,
         title: 'Videos'
       },
       {
-        id: 5,
+        id: 3,
         title: 'Projects'
       },
       {
-        id: 6,
+        id: 4,
         title: 'Feedback'
       }
     ];

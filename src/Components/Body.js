@@ -1,7 +1,5 @@
 import React, { Component} from 'react';
 import Home from './Home.js'
-import Images from './Images.js'
-import Movies from './Movies.js'
 import Videos from './Videos.js'
 import Projects from './Projects.js'
 import Feedback from './Feedback.js'
@@ -12,18 +10,12 @@ export class Body extends Component {
         if(activeTab === 1)
             return <Home/>
         else if(activeTab === 2){
-            return <Images/>
-        }
-        else if(activeTab === 3){
-            return <Movies/>
-        }
-        else if(activeTab === 4){
             return <Videos/>
         }
-        else if(activeTab === 5){
+        else if(activeTab === 3){
             return <Projects/>
         }  
-        else if(activeTab === 6){
+        else if(activeTab === 4){
             return <Feedback/>
         }  
     }

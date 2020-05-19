@@ -133,7 +133,7 @@ img.posterImg:hover{
 
 /* The Modal (background) */
 div.lightbox {
-    display: none;/* Hidden by default */
+    display: flex;/* Center middle div*/
     position: fixed; /* Stay in place */
     z-index: 1001; /* Sit on top */ /* Set high to be above ScrollUpButton */
     left: 0;
