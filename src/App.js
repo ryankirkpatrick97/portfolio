@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import SimpleReactLightbox from "simple-react-lightbox"
 import ScrollUpButton from "react-scroll-up-button"
 
 import './App.css'
@@ -44,7 +43,6 @@ export class App extends Component {
     ];
 
     return (
-      <SimpleReactLightbox>
       <body>
       <div className="page">
         <div className="header">
@@ -70,7 +68,6 @@ export class App extends Component {
       </div>
       <ScrollUpButton/>
       </body>
-      </SimpleReactLightbox>
     );
   }
 };

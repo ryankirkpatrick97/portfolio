@@ -4,9 +4,7 @@ export class Header extends Component{
     render(){
         return (
             <header>
-                <h2>CS 185 - Human-Computer Interface</h2>
-                <h2>Homework 6</h2>
-                <h2><i>Ryan Kirkpatrick</i></h2>
+                <h1><i>Ryan C. Kirkpatrick</i></h1>
             </header>
         )
     };
