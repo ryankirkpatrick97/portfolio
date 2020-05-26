@@ -15,7 +15,9 @@ class Home extends Component {
                     <img src={me} alt="Me" style={imgStyle}/>
                 </div>
                 <div className="item">
+                    <a href="https://ryankirkpatrick97.github.io/portfolio/resume.pdf" target="_blank" rel="noopener noreferrer">
                     <img src={resume} alt="My Resume" style={imgStyle}/>
+                    </a>
                 </div>
             </div>
         );
