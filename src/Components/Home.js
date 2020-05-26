@@ -4,19 +4,15 @@ import resume from '../images/resume.png'
 
 class Home extends Component {
     render() {
-        let imgStyle = {
-            width: '100%',
-            max_width: '300px'
-        }
 
         return (
             <div className="content">
                 <div className="item">
-                    <img src={me} alt="Me" style={imgStyle}/>
+                    <img src={me} alt="Me" style={{cursor: "auto"}}/>
                 </div>
                 <div className="item">
                     <a href="https://ryankirkpatrick97.github.io/portfolio/resume.pdf" target="_blank" rel="noopener noreferrer">
-                    <img src={resume} alt="My Resume" style={imgStyle}/>
+                    <img src={resume} alt="My Resume"/>
                     </a>
                 </div>
             </div>

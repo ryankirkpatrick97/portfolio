@@ -43,7 +43,7 @@ export class App extends Component {
     ];
 
     return (
-      <body>
+      <div>
       <div className="page">
         <div className="header">
           <Header/>
@@ -67,7 +67,7 @@ export class App extends Component {
         </div>
       </div>
       <ScrollUpButton/>
-      </body>
+      </div>
     );
   }
 };

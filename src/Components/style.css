@@ -12,11 +12,14 @@ body{
 
 header{
     background-color: #666;
-    padding: 30px;
+    padding: 50px;
     text-align: center;
     font-size: 18px;
-    color: white;
+    color:white;
 }
+
+
+
 
 /* Navigation Bar Styling */
 .nav-bar{
