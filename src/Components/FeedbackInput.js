@@ -35,22 +35,23 @@ export class FeedbackInput extends Component{
             alert('Please insert a message that is longer than 15 characters but shorter than 500')
         }
         else{
-            this.updateFirebase();
-            document.getElementById("userInput").reset();
-            alert('Database has been updated successfully.')
+            this.setState(
+                {time: moment().utcOffset('-07:00').format('YYYY-MM-DD hh:mm:ss a')},
+                () => {
+                    this.updateFirebase();
+                    document.getElementById("userInput").reset();
+                    alert('Database has been updated successfully.');
+                }
+            );
         }
         event.preventDefault();
     }
 
     updateFirebase(){
         if (!firebase.apps.length) {
-            firebase.initializeApp(config)
+            firebase.initializeApp(config);
         }
-        this.setState({
-            time: moment().utcOffset('-07:00').format('YYYY-MM-DD hh:mm:ss a')
-        });
-
-        firebase.database().ref('response').push().set(this.state)
+        firebase.database().ref('response').push().set(this.state);
     }
 
 
