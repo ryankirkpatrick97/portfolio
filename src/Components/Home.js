@@ -11,7 +11,7 @@ class Home extends Component {
                     <img src={me} alt="Me" style={{cursor: "auto"}}/>
                 </div>
                 <div className="item">
-                    <a href="https://ryankirkpatrick97.github.io/portfolio/resume.pdf" target="_blank" rel="noopener noreferrer">
+                    <a href="https://ryankirkpatrick97.github.io/portfolio/RyanKirkpatrickResume.pdf" target="_blank" rel="noopener noreferrer">
                     <img src={resume} alt="My Resume"/>
                     </a>
                 </div>
